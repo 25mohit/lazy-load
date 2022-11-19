@@ -1,0 +1,137 @@
+h1, h2, h3, p, span{
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+}
+.App{
+  margin: -8px;
+  padding: 5rem;
+  box-sizing: border-box;
+  display: flex;
+  /* height: 100vh; */
+  align-items: center;
+  background-color: rgb(235, 235, 235);
+  justify-content: center;
+}
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+  gap: 7rem;
+}
+.profile{
+  background-color: white;
+  min-width: 20rem;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: 0px 0px 28px 8px rgba(166,166,166,1);
+}
+.profile:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 28px 8px rgb(126, 126, 126);
+  transition: 0.6s;
+}
+.profile > div:nth-child(1){
+  text-align: right;
+  user-select: none;
+}
+.profile .details{
+  display: flex;
+  margin: 1rem 0;
+  flex-direction: column;
+}
+.profile .details div h3{
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+}
+.profile .details > div{
+  margin-bottom: 0.8rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile .details #icon{
+  font-size: 1.2rem;
+}
+.profile .details #globe{
+  font-size: 1.1rem;
+  color: orange !important;
+}
+.details .footer{
+  justify-content: right;
+  margin: 0 !important;
+}
+.profile .footer #enter-icon{
+  font-size: 1.4rem;
+  color: rgb(245, 77, 77);
+}
+.profile .footer #enter-icon:hover{
+  cursor: pointer;
+  color: red;
+}
+.show-detail{
+  background-color: rgba(255, 255, 255,0.4);
+  backdrop-filter: blur(3px);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+.show-detail .container{
+  width: 55%;
+  background-color: white;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 15px;
+  box-shadow: 0px 0px 28px 8px rgba(126, 126, 126,0.5);
+  height: fit-content;
+}
+.show-detail .container .top{
+  justify-content: right;
+  display: flex;
+}
+.show-detail .container .top #close{
+  font-size: 2rem;
+  color: orange;
+}
+.show-detail .container .top #close:hover{
+  color: red;
+  transition: 0.5s;
+}
+
+.show-detail .container .body{
+  display: flex;
+  flex-direction: column;
+}
+.LazyLoad {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.is-visible {
+  opacity: 1;
+}
+.show-detail .container .body p{
+  margin: 12px;
+}
+.show-detail .container .body > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.show-detail .container .body > div:nth-child(1) img{
+  width: 20%;
+}
+.show-detail .container .body > div:nth-child(2){
+  flex-direction: column;
+}
